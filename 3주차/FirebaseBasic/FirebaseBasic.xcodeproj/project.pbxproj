@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D14AA3029709C88004B9ED4 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7D14AA2F29709C88004B9ED4 /* FacebookCore */; };
+		7D14AA3229709C88004B9ED4 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 7D14AA3129709C88004B9ED4 /* FacebookLogin */; };
 		7D6D5761296F060D00206576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D5760296F060D00206576 /* AppDelegate.swift */; };
 		7D6D5763296F060D00206576 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D5762296F060D00206576 /* SceneDelegate.swift */; };
 		7D6D5765296F060D00206576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D5764296F060D00206576 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9359EE919845DFDBC3EF9083 /* Pods_FirebaseBasic.framework in Frameworks */,
+				7D14AA3029709C88004B9ED4 /* FacebookCore in Frameworks */,
+				7D14AA3229709C88004B9ED4 /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +116,10 @@
 			dependencies = (
 			);
 			name = FirebaseBasic;
+			packageProductDependencies = (
+				7D14AA2F29709C88004B9ED4 /* FacebookCore */,
+				7D14AA3129709C88004B9ED4 /* FacebookLogin */,
+			);
 			productName = FirebaseBasic;
 			productReference = 7D6D575D296F060D00206576 /* FirebaseBasic.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +148,9 @@
 				Base,
 			);
 			mainGroup = 7D6D5754296F060D00206576;
+			packageReferences = (
+				7D14AA2E29709C88004B9ED4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 7D6D575E296F060D00206576 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -432,6 +443,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D14AA2E29709C88004B9ED4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D14AA2F29709C88004B9ED4 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D14AA2E29709C88004B9ED4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		7D14AA3129709C88004B9ED4 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D14AA2E29709C88004B9ED4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D6D5755296F060D00206576 /* Project object */;
 }

@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuthUI
 import FirebaseEmailAuthUI
 import FirebaseGoogleAuthUI
-//import FirebaseFacebookAuthUI
+import FirebaseFacebookAuthUI
 
 class ViewController: UIViewController, FUIAuthDelegate {
     let authUI = FUIAuth.defaultAuthUI()
@@ -36,7 +36,7 @@ class ViewController: UIViewController, FUIAuthDelegate {
                 self.authUI?.delegate = self
                 let providers: [FUIAuthProvider] = [
                   FUIEmailAuth(),
-                  FUIGoogleAuth() //, FUIFacebookAuth()
+                  FUIGoogleAuth(), FUIFacebookAuth()
                 ]
                 self.authUI!.providers = providers
                 
